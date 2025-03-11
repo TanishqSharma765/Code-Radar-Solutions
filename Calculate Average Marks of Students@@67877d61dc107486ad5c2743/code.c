@@ -1,12 +1,22 @@
-n = int(input())  # Number of students
-total_marks = 0
+#include <stdio.h>
 
-for _ in range(n):
-    data = input().split()
-    marks = float(data[-1])  # The last element is the marks
-    total_marks += marks
+int main() {
+    int n;
+    scanf("%d", &n); // Read number of students
 
-average_marks = total_marks / n
-print(f"Average Marks: {average_marks:.2f}")
+    double total_marks = 0, marks;
+    char name[100]; // To store the name
+    int roll;
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d %s %lf", &roll, name, &marks); // Read roll number, name, and marks
+        total_marks += marks;
+    }
+
+    double average_marks = total_marks / n;
+    printf("Average Marks: %.2lf\n", average_marks); // Print average rounded to 2 decimal places
+
+    return 0;
+}
 
 
