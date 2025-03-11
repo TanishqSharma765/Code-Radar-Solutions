@@ -16,7 +16,7 @@ int main() {
     float totalMarks = 0;
 
     for (int i = 0; i < n; i++) {
-        printf("Enter details for student %d (rollNo name marks): ", i + 1);
+        printf(""", i + 1);
         scanf("%d %s %f", &students[i].rollNo, students[i].name, &students[i].marks);
         totalMarks += students[i].marks;
     }
