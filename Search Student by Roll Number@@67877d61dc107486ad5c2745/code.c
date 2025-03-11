@@ -25,4 +25,16 @@ int main() {
     // Search for the student
     for (int i = 0; i < n; i++) {
         if (students[i].roll == search_roll) {
-            printf("Roll Number: %d, Name: %s,
+            printf("Roll Number: %d, Name: %s, Marks: %.2lf\n", students[i].roll, students[i].name, students[i].marks);
+            found = 1;
+            break;
+        }
+    }
+
+    // If student not found
+    if (!found) {
+        printf("Student not found\n");
+    }
+
+    return 0;
+}
