@@ -7,7 +7,6 @@ int main() {
     scanf("%d", &number); // Read an integer
 
     // Print the number in different formats
-    printf("Decimal: %d\n", number);
     printf("Hexadecimal: %X\n", number); // %X for uppercase hexadecimal
     printf("Octal: %o\n", number); // %o for octal format
 
