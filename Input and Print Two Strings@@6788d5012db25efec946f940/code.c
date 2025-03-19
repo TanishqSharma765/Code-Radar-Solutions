@@ -4,14 +4,15 @@ int main() {
     char str1[100], str2[100]; // Declare character arrays to store strings
 
     printf("");
-    scanf("%s", str1); // Read first string (without spaces)
+    fgets(str1, sizeof(str1), stdin); // Read first string (including spaces)
 
     printf("");
-    scanf("%s", str2); // Read second string (without spaces)
+    fgets(str2, sizeof(str2), stdin); // Read second string (including spaces)
 
     // Print the entered strings
-    printf("First string: %s\n", str1);
-    printf("Second string: %s\n", str2);
+    printf("You entered: %s", str1);
+    printf("%s", str2);
 
     return 0;
 }
+
