@@ -6,13 +6,14 @@ int main() {
     // Taking input for an integer
     scanf("%d", &a);
 
-    // Performing logical NOT operation
-    if (!a) {
-        printf("True\n");  // If a is 0, !a becomes 1 (True)
+    // Checking if the number is negative
+    if (a < 0) {
+        printf("True\n");  // Print True for negative numbers
     } else {
-        printf("False\n"); // If a is nonzero (positive or negative), !a becomes 0 (False)
+        printf("False\n"); // Print False for 0 or positive numbers
     }
 
     return 0;
 }
+
 
