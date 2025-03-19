@@ -10,8 +10,9 @@ int main() {
     if (!a) {
         printf("True\n");  // If a is 0, !a becomes 1 (True)
     } else {
-        printf("False\n"); // If a is nonzero, !a becomes 0 (False)
+        printf("False\n"); // If a is nonzero (positive or negative), !a becomes 0 (False)
     }
 
     return 0;
 }
+
