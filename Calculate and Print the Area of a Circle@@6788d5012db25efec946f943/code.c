@@ -12,7 +12,7 @@ int main() {
     area = PI * radius * radius;
 
     // Print the area
-    printf("Area of the circle: %.2f\n", area); // Print with 2 decimal places
+    printf("Area: %.2f\n", area); // Print with 2 decimal places
 
     return 0;
 }
