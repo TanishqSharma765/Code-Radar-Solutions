@@ -11,7 +11,7 @@ int main() {
     average = (num1 + num2 + num3) / 3.0;
 
     // Printing the result
-    printf("The average is: %.2lf\n", average); // Print with 2 decimal places
+    printf("Average: %.2lf\n", average); // Print with 2 decimal places
 
     return 0;
 }
