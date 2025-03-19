@@ -5,22 +5,18 @@ int main() {
     int age; // Declare an integer for age
 
     // Taking input
-    printf("");
-    fgets(name, sizeof(name), stdin); // Read full name (including spaces)
-
-    printf("");
+    scanf("%s", name); // Read name (stops at space)
     scanf("%d", &age); // Read age
 
-    getchar(); // Consume the newline character left by scanf
+    getchar(); // Consume the leftover newline
 
-    printf("");
     fgets(hobby, sizeof(hobby), stdin); // Read full hobby (including spaces)
 
     // Printing the details
-    printf("\nYour details:\n");
-    printf("Name: %s", name);
+    printf("Name: %s\n", name);
     printf("Age: %d\n", age);
-    printf("Hobby: %s", hobby);
+    printf("Hobby: %s", hobby); // fgets already includes a newline
 
     return 0;
 }
+
