@@ -3,7 +3,7 @@
 int main() {
     int number; // Declare an integer variable
 
-    printf("Enter an integer: ");
+    printf("");
     scanf("%d", &number); // Read an integer
 
     // Print the number in different formats
