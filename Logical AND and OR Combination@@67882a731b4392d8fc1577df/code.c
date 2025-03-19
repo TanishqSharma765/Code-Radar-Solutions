@@ -7,12 +7,13 @@ int main() {
     scanf("%d %d", &a, &b);
 
     // Logical AND-OR combination
-    if ((a <= 0) && (b > 0)) {
-        printf("True\n");  // True if a is non-positive and b is positive
+    if ((a > 0 && b <= 0) || (a == 0 && b == 0)) {
+        printf("True\n");  // Condition met
     } else {
-        printf("False\n");
+        printf("False\n"); // Condition not met
     }
 
     return 0;
 }
+
 
