@@ -3,7 +3,7 @@
 int main() {
     int num1, num2, sum; // Declare variables
 
-    printf("Enter two integers: ");
+    printf("");
     scanf("%d %d", &num1, &num2); // Read two integers
 
     sum = num1 + num2; // Calculate the sum
