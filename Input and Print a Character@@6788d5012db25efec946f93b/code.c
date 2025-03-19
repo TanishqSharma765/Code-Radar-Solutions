@@ -3,7 +3,7 @@
 int main() {
     char ch; // Declare a character variable
 
-    printf(" ");
+    printf("");
     scanf(" %c", &ch); // Use a space before %c to ignore any whitespace
 
     // Printing the entered character
