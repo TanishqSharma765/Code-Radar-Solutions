@@ -5,15 +5,15 @@ int main() {
     int age; // Declare an integer for age
 
     // Taking input
-    printf("Enter your name: ");
+    printf("");
     fgets(name, sizeof(name), stdin); // Read full name (including spaces)
 
-    printf("Enter your age: ");
+    printf("");
     scanf("%d", &age); // Read age
 
     getchar(); // Consume the newline character left by scanf
 
-    printf("Enter your hobby: ");
+    printf("");
     fgets(hobby, sizeof(hobby), stdin); // Read full hobby (including spaces)
 
     // Printing the details
