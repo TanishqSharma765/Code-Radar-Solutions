@@ -2,7 +2,7 @@
 
 int main() {
     float radius, area;
-    const float PI = 3.14159; // Define constant value for π
+    const float PI = 3.14; // Define constant value for π
 
     // Taking input for radius
     printf("");
