@@ -7,7 +7,7 @@ int main() {
     scanf("%f", &number);
 
     // Printing the entered number with 2 decimal places
-    printf(" %.2f\n", number);
+    printf("You entered: %.2f\n", number);
 
     return 0;
 }
