@@ -6,14 +6,15 @@ int main() {
     // Taking input for an integer
     scanf("%d", &a);
 
-    // Checking if the number is negative
-    if (a < 0) {
-        printf("True\n");  // Print True for negative numbers
+    // Checking if the number is negative or zero
+    if (a <= 0) {
+        printf("True\n");  // Print True for negative numbers and 0
     } else {
-        printf("False\n"); // Print False for 0 or positive numbers
+        printf("False\n"); // Print False for positive numbers
     }
 
     return 0;
 }
+
 
 
