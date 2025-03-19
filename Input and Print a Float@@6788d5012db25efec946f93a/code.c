@@ -3,7 +3,7 @@
 int main() {
     float number; // Declare the variable
 
-    printf("Enter a floating-point number: ");
+    printf("");
     scanf("%f", &number);
 
     // Printing the entered number with 2 decimal places
