@@ -4,7 +4,7 @@ int main() {
     double num1, num2, num3, average; // Declare variables
 
     // Taking input
-    printf("Enter three numbers: ");
+    printf("");
     scanf("%lf %lf %lf", &num1, &num2, &num3);
 
     // Calculating the average
