@@ -1,4 +1,5 @@
-// Your code here...#include <stdio.h>
+// Your code here...
+#include <stdio.h>
 
 char* welcome() {
     return "Welcome to Code Radar!";
