@@ -1,21 +1,45 @@
-// Your code here...
-#include<stdio.h>
-#include<string.h>
-int main(){
-    char str[100],word1[30],word2[30];
-    scanf("%[^\n]",str);
-    sscanf(str,"%s %s",word1,word2);
-    int n1=strlen(word1);
-    int n2=strlen(word2);
-    for(int i=0;i<n1/2;i++){
-        char temp=word1[i];
-        word1[i]=word1[n1-i-1];
-        word1[n1-i-1]=temp;
+#include <stdio.h>
+#include <string.h>
+
+void reverseWord(char *start, char *end) {
+    while (start < end) {
+        char temp = *start;
+        *start = *end;
+        *end = temp;
+        start++;
+        end--;
     }
-    for(int i=0;i<n2/2;i++){
-        char temp=word2[i];
-        word2[i]=word2[n2-i-1];
-        word2[n2-i-1]=temp;
+}
+
+void reverseWordsInString(char *str) {
+    char *wordStart = str;
+    char *temp = str;
+
+    while (*temp) {
+        if (*temp == ' ') {
+            reverseWord(wordStart, temp - 1);
+            wordStart = temp + 1;
+        }
+        temp++;
     }
-    printf("%s %s",word1,word2);
+    reverseWord(wordStart, temp - 1);
+}
+
+int main() {
+    char str[1000];
+
+    // Read input
+    fgets(str, sizeof(str), stdin);
+
+    // Remove trailing newline if present
+    size_t len = strlen(str);
+    if (len > 0 && str[len - 1] == '\n') {
+        str[len - 1] = '\0';
+    }
+
+    reverseWordsInString(str);
+
+    printf("%s\n", str);
+
+    return 0;
 }
