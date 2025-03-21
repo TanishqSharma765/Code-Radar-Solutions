@@ -1,33 +1,34 @@
 // Your code here...
-#include<stdio.h>
-#include <limits.h> 
-int main(){
-    int n;
-    scanf("%d",&n);
-    if (n < 2) {
-        printf("-1\n"); 
-        return 0;
-    }
-    
-   
-    
-    int arr[n];
-    for(int i=0;i<n;i++){
-        scanf("%d",&arr[i]);
-    }
-    int max=arr[0];
-    int second_max=INT_MIN;
-    for(int i=1;i<n;i++){
-        if(arr[i]>max){
-            
-            second_max=max;
-            max=arr[i];
-        } else if (arr[i] > second_max && arr[i] != max) {
-            second_max=arr[i];
+#include <stdio.h>
+#include <limits.h> // For INT_MAX
+
+int findSecondSmallest(int arr[], int n) {
+    if (n < 2) return -1; // If array has less than 2 elements, no second smallest exists
+
+    int first = INT_MAX, second = INT_MAX;
+
+    for (int i = 0; i < n; i++) {
+        if (arr[i] < first) {
+            second = first;  // Update second smallest
+            first = arr[i];  // Update smallest
+        } else if (arr[i] < second && arr[i] != first) {
+            second = arr[i]; // Update second smallest
         }
-    }if (second_max == INT_MIN) {
-        printf("-1\n"); // No second maximum exists
-    } else {
-        printf("%d\n", second_max);
     }
+
+    return (second == INT_MAX) ? -1 : second;
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    int arr[n];
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("%d\n", findSecondSmallest(arr, n));
+
+    return 0;
 }
